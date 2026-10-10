@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;500;600;700;800&display=swap');
 
 * {
@@ -6,20 +7,64 @@
   padding: 0;
 }
 
+/* ================= THEME VARIABLES ================= */
+
 :root {
   font-family: "Nunito", sans-serif;
+
+  --app-bg: #f8f8f5;
+  --text-color: #15171b;
+  --muted-text: #666b72;
+  --sidebar-bg: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #deded8;
+  --hover-bg: #f0f4fa;
+  --next-bg: #eef5ff;
+  --shadow-color: #dce8fa;
 }
+
+.app.dark {
+  --app-bg: #0c0f14;
+  --text-color: #f1f4f8;
+  --muted-text: #aab2bd;
+  --sidebar-bg: #10141b;
+  --card-bg: #11161e;
+  --border-color: #2a3340;
+  --hover-bg: #1a202a;
+  --next-bg: #101b2b;
+  --shadow-color: #2374e1;
+}
+
+/* ================= GLOBAL ================= */
 
 body {
   margin: 0;
 }
 
 .app {
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  background: #f8f8f5;
-  color: #15171b;
-  transition: 0.3s ease;
+  background: var(--app-bg);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-aware headings and text */
+
+.app h1,
+.app h2,
+.app h3,
+.app h4,
+.app h5,
+.app h6,
+.app .variable-card,
+.app .workflow-card {
+  color: var(--text-color);
+}
+
+.app p {
+  color: var(--muted-text);
 }
 
 /* ================= SIDEBAR ================= */
@@ -28,14 +73,15 @@ body {
   width: 235px;
   min-height: 100vh;
   padding: 28px 18px;
-  border-right: 2px solid #deded8;
-  background: #ffffff;
+  border-right: 2px solid var(--border-color);
+  background: var(--sidebar-bg);
   display: flex;
   flex-direction: column;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
+  color: var(--text-color);
 }
 
 .logo {
@@ -67,10 +113,11 @@ nav {
   cursor: pointer;
   font-weight: 600;
   transition: 0.2s;
+  color: var(--text-color);
 }
 
 .nav-item:hover {
-  background: #f0f4fa;
+  background: var(--hover-bg);
 }
 
 .nav-item.active {
@@ -96,11 +143,11 @@ nav {
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-  color: inherit;
+  color: var(--text-color);
 }
 
 .theme-button:hover {
-  background: #f0f4fa;
+  background: var(--hover-bg);
 }
 
 /* ================= MAIN ================= */
@@ -118,7 +165,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px dashed #cfcfc8;
+  border-bottom: 2px dashed var(--border-color);
 }
 
 .header-decoration {
@@ -196,7 +243,6 @@ nav {
   max-width: 650px;
   margin: 18px auto;
   line-height: 1.6;
-  color: #666b72;
 }
 
 /* ================= VARIABLE SECTION ================= */
@@ -223,6 +269,7 @@ nav {
   align-items: center;
   justify-content: center;
   font-weight: 800;
+  flex-shrink: 0;
 }
 
 .section-heading h2 {
@@ -231,7 +278,6 @@ nav {
 }
 
 .section-heading p {
-  color: #73777c;
   font-size: 14px;
 }
 
@@ -243,20 +289,21 @@ nav {
 
 .variable-card {
   position: relative;
-  background: white;
-  border: 2px solid #deded8;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
   border-radius: 18px;
   padding: 30px 20px;
   cursor: pointer;
   transition: 0.25s;
   text-align: center;
   font-family: inherit;
+  color: var(--text-color);
 }
 
 .variable-card:hover {
   transform: translateY(-4px);
   border-color: #2374e1;
-  box-shadow: 5px 6px 0 #dce8fa;
+  box-shadow: 5px 6px 0 var(--shadow-color);
 }
 
 .variable-card.selected {
@@ -276,7 +323,6 @@ nav {
 }
 
 .variable-card p {
-  color: #777;
   font-size: 13px;
   margin-top: 7px;
 }
@@ -298,7 +344,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #eef5ff;
+  background: var(--next-bg);
 }
 
 .ready-label {
@@ -315,7 +361,6 @@ nav {
 }
 
 .next-section p {
-  color: #666;
   font-size: 14px;
 }
 
@@ -363,11 +408,12 @@ nav {
 .workflow-card {
   flex: 1;
   min-height: 155px;
-  border: 2px solid #deded8;
+  border: 2px solid var(--border-color);
   border-radius: 15px;
-  background: white;
+  background: var(--card-bg);
   padding: 18px;
   position: relative;
+  color: var(--text-color);
 }
 
 .workflow-card span {
@@ -391,7 +437,6 @@ nav {
 .workflow-card p {
   margin-top: 5px;
   font-size: 12px;
-  color: #70757a;
   line-height: 1.4;
 }
 
@@ -400,67 +445,9 @@ nav {
   color: #2374e1;
 }
 
-/* ================= DARK MODE ================= */
-
-.app.dark {
-  background: #0c0f14;
-  color: #f1f4f8;
-}
-
-.dark .sidebar {
-  background: #10141b;
-  border-color: #252c36;
-}
-
-.dark .nav-item:hover,
-.dark .theme-button:hover {
-  background: #1a202a;
-}
-
-.dark .header {
-  border-color: #29313d;
-}
-
-.dark .title-area p,
-.dark .section-heading p,
-.dark .hero p {
-  color: #9ca5b2;
-}
-
-.dark .variable-card,
-.dark .workflow-card {
-  background: #11161e;
-  border-color: #2a3340;
-  color: #f1f4f8;
-}
-
-.dark .variable-card:hover {
-  box-shadow: 5px 6px 0 #2374e1;
-}
-
-.dark .variable-card p,
-.dark .workflow-card p {
-  color: #9ca5b2;
-}
-
-.dark .next-section {
-  background: #101b2b;
-  border-color: #2374e1;
-}
-
-.dark .next-section p {
-  color: #9ca5b2;
-}
-
-.dark .new-project {
-  color: #4e9aff;
-  border-color: #4e9aff;
-}
-
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-
   .sidebar {
     width: 75px;
     padding: 20px 10px;
@@ -504,29 +491,4 @@ nav {
     gap: 20px;
     text-align: center;
   }
-}
-/* DARK MODE TEXT FIX */
-
-.dark {
-  color: #f1f4f8;
-}
-
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
-  color: #f1f4f8;
-}
-
-.dark p {
-  color: #aab2bd;
-}
-.app {
-  width: 100%;
-  min-height: 100vh;
-}
-.app.dark {
-  background: #0b1015;
 }

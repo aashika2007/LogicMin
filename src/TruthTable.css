@@ -17,12 +17,14 @@
   align-items: center;
   gap: 7px;
   border: 2px solid #ddd;
-  background: white;
+  background: #ffffff;
+  color: #15171b;
   padding: 10px 15px;
   border-radius: 10px;
   font-family: inherit;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .back-button:hover,
@@ -114,11 +116,28 @@
   padding: 8px;
   border: 2px solid #d8dce2;
   border-radius: 8px;
-  background: white;
+  background: #ffffff;
+  color: #15171b;
   text-align: center;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.truth-card select option {
+  background: #ffffff;
+  color: #15171b;
+}
+
+.dark .truth-card select {
+  background: #171d26;
+  color: #f1f4f8;
+  border-color: #353e4b;
+}
+
+.dark .truth-card select option {
+  background: #171d26;
+  color: #f1f4f8;
 }
 
 .truth-card select:focus {
@@ -190,8 +209,3 @@
   border-color: #303743;
 }
 
-.dark .truth-card select {
-  background: #171d26;
-  color: #f1f4f8;
-  border-color: #353e4b;
-}
