@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  background: #f8f8f5;
+  color: #15171b;
+  transition: 0.3s ease;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 235px;
+  min-height: 100vh;
+  padding: 28px 18px;
+  border-right: 2px solid #deded8;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 29px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+.logo-blue {
+  color: #2374e1;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background: #f0f4fa;
+}
+
+.nav-item.active {
+  background: #2374e1;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-button {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  color: inherit;
+}
+
+.theme-button:hover {
+  background: #f0f4fa;
+}
+
+/* ================= MAIN ================= */
+
+.main {
+  margin-left: 235px;
+  width: calc(100% - 235px);
+  padding: 25px 42px 60px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px dashed #cfcfc8;
+}
+
+.header-decoration {
+  color: #2374e1;
+}
+
+.title-area {
+  text-align: center;
+}
+
+.title-area h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 39px;
+  letter-spacing: 1px;
+}
+
+.title-area h1 span {
+  text-decoration: underline;
+  text-decoration-color: #2374e1;
+  text-decoration-thickness: 3px;
+}
+
+.title-area p {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.title-area b {
+  color: #2374e1;
+  margin: 0 5px;
+}
+
+.new-project {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 2px dashed #2374e1;
+  background: transparent;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #2374e1;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  margin: 38px auto 25px;
+  max-width: 850px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-decoration {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  color: #f4b400;
+  transform: rotate(8deg);
+}
+
+.hero h2 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 42px;
+  line-height: 0.95;
+}
+
+.hero h2 span {
+  color: #2374e1;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 18px auto;
+  line-height: 1.6;
+  color: #666b72;
+}
+
+/* ================= VARIABLE SECTION ================= */
+
+.variable-section {
+  max-width: 1050px;
+  margin: 35px auto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.step-number {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: #2374e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.section-heading h2 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 28px;
+}
+
+.section-heading p {
+  color: #73777c;
+  font-size: 14px;
+}
+
+.variable-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.variable-card {
+  position: relative;
+  background: white;
+  border: 2px solid #deded8;
+  border-radius: 18px;
+  padding: 30px 20px;
+  cursor: pointer;
+  transition: 0.25s;
+  text-align: center;
+  font-family: inherit;
+}
+
+.variable-card:hover {
+  transform: translateY(-4px);
+  border-color: #2374e1;
+  box-shadow: 5px 6px 0 #dce8fa;
+}
+
+.variable-card.selected {
+  border-color: #2374e1;
+  box-shadow: 5px 6px 0 #2374e1;
+}
+
+.variable-icon {
+  font-family: "Patrick Hand", cursive;
+  font-size: 36px;
+  color: #2374e1;
+  margin-bottom: 10px;
+}
+
+.variable-card h3 {
+  font-size: 19px;
+}
+
+.variable-card p {
+  color: #777;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.selected-label {
+  margin-top: 15px;
+  color: #2374e1;
+  font-weight: 800;
+}
+
+/* ================= NEXT ================= */
+
+.next-section {
+  max-width: 1050px;
+  margin: 30px auto;
+  border: 2px solid #2374e1;
+  border-radius: 18px;
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eef5ff;
+}
+
+.ready-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #2374e1;
+}
+
+.next-section h2 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 28px;
+  margin: 4px 0;
+}
+
+.next-section p {
+  color: #666;
+  font-size: 14px;
+}
+
+.primary-button {
+  border: none;
+  background: #2374e1;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= WORKFLOW ================= */
+
+.workflow {
+  max-width: 1050px;
+  margin: 45px auto;
+}
+
+.workflow-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.workflow-title h2 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 30px;
+}
+
+.workflow-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.workflow-card {
+  flex: 1;
+  min-height: 155px;
+  border: 2px solid #deded8;
+  border-radius: 15px;
+  background: white;
+  padding: 18px;
+  position: relative;
+}
+
+.workflow-card span {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  font-size: 12px;
+  color: #2374e1;
+  font-weight: 800;
+}
+
+.workflow-card svg {
+  color: #2374e1;
+  margin-bottom: 8px;
+}
+
+.workflow-card h3 {
+  font-size: 17px;
+}
+
+.workflow-card p {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #70757a;
+  line-height: 1.4;
+}
+
+.arrow {
+  font-size: 25px;
+  color: #2374e1;
+}
+
+/* ================= DARK MODE ================= */
+
+.app.dark {
+  background: #0c0f14;
+  color: #f1f4f8;
+}
+
+.dark .sidebar {
+  background: #10141b;
+  border-color: #252c36;
+}
+
+.dark .nav-item:hover,
+.dark .theme-button:hover {
+  background: #1a202a;
+}
+
+.dark .header {
+  border-color: #29313d;
+}
+
+.dark .title-area p,
+.dark .section-heading p,
+.dark .hero p {
+  color: #9ca5b2;
+}
+
+.dark .variable-card,
+.dark .workflow-card {
+  background: #11161e;
+  border-color: #2a3340;
+  color: #f1f4f8;
+}
+
+.dark .variable-card:hover {
+  box-shadow: 5px 6px 0 #2374e1;
+}
+
+.dark .variable-card p,
+.dark .workflow-card p {
+  color: #9ca5b2;
+}
+
+.dark .next-section {
+  background: #101b2b;
+  border-color: #2374e1;
+}
+
+.dark .next-section p {
+  color: #9ca5b2;
+}
+
+.dark .new-project {
+  color: #4e9aff;
+  border-color: #4e9aff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 75px;
+    padding: 20px 10px;
+  }
+
+  .logo span,
+  .nav-item span,
+  .theme-button span {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .nav-item,
+  .theme-button {
+    justify-content: center;
+  }
+
+  .main {
+    margin-left: 75px;
+    width: calc(100% - 75px);
+    padding: 20px;
+  }
+
+  .variable-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-cards {
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .next-section {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+/* DARK MODE TEXT FIX */
+
+.dark {
+  color: #f1f4f8;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #f1f4f8;
+}
+
+.dark p {
+  color: #aab2bd;
+}
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+.app.dark {
+  background: #0b1015;
+}

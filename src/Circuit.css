@@ -1,0 +1,515 @@
+.circuit-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+/* HEADER */
+
+.circuit-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.circuit-header h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 42px;
+  margin: 4px 0;
+}
+
+.circuit-header p {
+  color: #73777c;
+}
+
+
+/* EXPRESSION */
+
+.circuit-expression {
+  max-width: 950px;
+  margin: 0 auto 20px;
+
+  background: white;
+
+  border: 2px solid #deded8;
+  border-radius: 14px;
+
+  padding: 14px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circuit-expression span {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #8a8f96;
+}
+
+.circuit-expression strong {
+  font-family: "Patrick Hand", cursive;
+  font-size: 28px;
+  color: #2374e1;
+}
+
+
+/* CANVAS */
+
+.circuit-canvas {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border: 2px solid #deded8;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    6px 6px 0 #e5e5df;
+}
+
+.logic-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* GRID */
+
+.grid-line {
+  stroke: #e7e9ec;
+  stroke-width: 0.7;
+}
+
+
+/* TEXT */
+
+.svg-section-label {
+  font-size: 11px;
+  font-weight: 900;
+  fill: #8d9298;
+  letter-spacing: 2px;
+}
+
+.group-label-svg {
+  font-family: "Patrick Hand", cursive;
+  font-size: 19px;
+  fill: #2374e1;
+}
+
+
+/* INPUT NODES */
+
+.input-circle {
+  fill: white;
+  stroke-width: 3;
+}
+
+.input-text {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+
+/* VARIABLE WIRES */
+
+.variable-wire {
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.complement-wire {
+  stroke-dasharray: 9 7;
+}
+
+
+/* NOT GATE */
+
+.not-gate {
+  fill: white;
+  stroke-width: 3;
+}
+
+.not-bubble {
+  fill: white;
+  stroke-width: 3;
+}
+
+.literal-label {
+  font-family: "Patrick Hand", cursive;
+  font-size: 16px;
+}
+
+
+/* AND */
+
+.and-gate {
+  fill: #eef5ff;
+
+  stroke: #2374e1;
+  stroke-width: 3;
+}
+
+
+/* OR */
+
+.or-gate {
+  fill: #f7efff;
+
+  stroke: #805ad5;
+  stroke-width: 3;
+}
+
+
+/* GATE TEXT */
+
+.gate-text {
+  font-size: 11px;
+  font-weight: 900;
+  fill: #30343a;
+}
+
+
+/* SINGLE-LITERAL JUNCTION */
+
+.junction {
+  fill: #2374e1;
+
+  stroke: white;
+  stroke-width: 2;
+}
+
+
+/* PRODUCT TERM WIRES */
+
+.term-wire {
+  stroke: #2374e1;
+
+  stroke-width: 3;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* OUTPUT */
+
+.output-wire {
+  stroke: #805ad5;
+
+  stroke-width: 4;
+
+  stroke-linecap: round;
+}
+
+.output-circle {
+  fill: #fff4ed;
+
+  stroke: #e45826;
+  stroke-width: 3;
+}
+
+.output-text {
+  fill: #e45826;
+
+  font-size: 21px;
+  font-weight: 900;
+}
+
+
+/* LEGEND */
+
+.circuit-legend {
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 28px;
+
+  border: 2px dashed #d1d5da;
+  border-radius: 13px;
+
+  padding: 14px 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.circuit-legend > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.variable-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.variable-legend small {
+  color: #7b8087;
+
+  margin-left: 3px;
+}
+
+
+.legend-variable {
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid;
+
+  border-radius: 50%;
+
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 900;
+}
+
+
+.normal-line-example {
+  width: 45px;
+
+  height: 3px;
+
+  background: #444b55;
+
+  display: inline-block;
+}
+
+
+.dashed-line-example {
+  width: 45px;
+
+  height: 3px;
+
+  display: inline-block;
+
+  background:
+    repeating-linear-gradient(
+      to right,
+      #444b55 0,
+      #444b55 8px,
+      transparent 8px,
+      transparent 14px
+    );
+}
+
+
+.legend-symbol {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.and-symbol {
+  color: #2374e1;
+}
+
+.or-symbol {
+  color: #805ad5;
+}
+
+
+/* NEXT */
+
+.circuit-next {
+  max-width: 1000px;
+
+  margin: 25px auto;
+
+  border: 2px solid #2374e1;
+  border-radius: 15px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #eef5ff;
+}
+
+.circuit-next > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #2374e1;
+}
+
+.circuit-next strong {
+  color: #20242a;
+}
+
+.circuit-next p {
+  color: #6d737a;
+
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+
+/* CONSTANT CIRCUIT */
+
+.constant-circuit {
+  min-height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 25px;
+}
+
+.constant-source {
+  border: 3px solid #2374e1;
+
+  border-radius: 13px;
+
+  padding: 20px 30px;
+
+  text-align: center;
+}
+
+.constant-source span {
+  display: block;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  color: #888;
+}
+
+.constant-source strong {
+  font-size: 40px;
+
+  color: #2374e1;
+}
+
+.constant-wire {
+  font-size: 30px;
+
+  color: #2374e1;
+}
+
+.output-node {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #fff4ed;
+
+  border: 3px solid #e45826;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 900;
+
+  color: #e45826;
+}
+
+
+/* DARK MODE */
+
+.dark .circuit-header p {
+  color: #9ca5b2;
+}
+
+.dark .circuit-expression,
+.dark .circuit-canvas {
+  background: #11161e;
+
+  border-color: #2a3340;
+
+  color: #f1f4f8;
+}
+
+.dark .circuit-canvas {
+  box-shadow:
+    6px 6px 0 #080b0f;
+}
+
+.dark .grid-line {
+  stroke: #1d2530;
+}
+
+.dark .input-circle,
+.dark .not-gate,
+.dark .not-bubble {
+  fill: #11161e;
+}
+
+.dark .and-gate {
+  fill: #10203a;
+}
+
+.dark .or-gate {
+  fill: #211530;
+}
+
+.dark .gate-text {
+  fill: #f1f4f8;
+}
+
+.dark .circuit-legend {
+  border-color: #394351;
+}
+
+.dark .normal-line-example {
+  background: #aab4c0;
+}
+
+.dark .dashed-line-example {
+  background:
+    repeating-linear-gradient(
+      to right,
+      #aab4c0 0,
+      #aab4c0 8px,
+      transparent 8px,
+      transparent 14px
+    );
+}
+
+.dark .variable-legend small {
+  color: #9ca5b2;
+}
+
+.dark .circuit-next {
+  background: #101b2b;
+}
+
+.dark .circuit-next strong {
+  color: #f1f4f8;
+}
+
+.dark .circuit-next p {
+  color: #9ca5b2;
+}
+
+.dark .constant-source {
+  background: #11161e;
+}
+

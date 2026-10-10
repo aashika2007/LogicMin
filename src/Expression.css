@@ -1,0 +1,313 @@
+.expression-page {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.expression-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.expression-header h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 42px;
+  margin: 4px 0;
+}
+
+.expression-header p {
+  color: #73777c;
+}
+
+
+/* MAIN EXPRESSION */
+
+.expression-result-card {
+  max-width: 720px;
+  margin: 0 auto;
+
+  background: white;
+
+  border: 2px solid #deded8;
+  border-radius: 18px;
+
+  padding: 30px;
+
+  box-shadow: 5px 5px 0 #e5e5df;
+
+  text-align: center;
+}
+
+.result-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  color: #2374e1;
+
+  margin-bottom: 15px;
+}
+
+.expression-box {
+  border: 2px dashed #2374e1;
+
+  border-radius: 14px;
+
+  padding: 24px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  background: #f5f9ff;
+}
+
+.f-label {
+  font-family: "Patrick Hand", cursive;
+
+  font-size: 37px;
+
+  color: #555;
+}
+
+.expression-value {
+  font-family: "Patrick Hand", cursive;
+
+  font-size: 42px;
+
+  color: #2374e1;
+
+  font-weight: 700;
+}
+
+.expression-note {
+  margin-top: 15px;
+
+  font-size: 12px;
+
+  color: #7b8086;
+}
+
+
+/* GROUPS */
+
+.expression-groups {
+  max-width: 720px;
+
+  margin: 30px auto 0;
+}
+
+.expression-section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #2374e1;
+
+  margin-bottom: 15px;
+}
+
+.expression-section-title h2 {
+  font-family: "Patrick Hand", cursive;
+
+  font-size: 28px;
+}
+
+.expression-group-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.expression-group-card {
+  background: white;
+
+  border: 2px solid #deded8;
+
+  border-radius: 13px;
+
+  min-height: 75px;
+
+  padding: 12px 16px;
+
+  display: grid;
+
+  grid-template-columns: 55px 1fr 40px 110px;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.expression-group-number {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-weight: 900;
+}
+
+.expression-group-details span {
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  color: #92979d;
+}
+
+.expression-group-details strong {
+  font-size: 13px;
+}
+
+.expression-arrow {
+  text-align: center;
+
+  font-size: 25px;
+
+  color: #2374e1;
+}
+
+.expression-term {
+  text-align: center;
+
+  font-family: "Patrick Hand", cursive;
+
+  font-size: 28px;
+
+  color: #2374e1;
+
+  font-weight: 700;
+}
+
+
+/* EXPLANATION */
+
+.expression-explanation {
+  max-width: 720px;
+
+  margin: 24px auto;
+
+  border: 2px dashed #c8ccd1;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  background: #fafafa;
+}
+
+.expression-explanation h3 {
+  font-family: "Patrick Hand", cursive;
+
+  font-size: 22px;
+
+  margin-bottom: 5px;
+}
+
+.expression-explanation p {
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #70757b;
+}
+
+
+/* SPECIAL CASE */
+
+.special-expression {
+  border: 2px dashed #c8ccd1;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #777;
+}
+
+
+/* BUTTONS */
+
+.expression-actions {
+  max-width: 720px;
+
+  margin: 25px auto 0;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+/* DARK MODE */
+
+.dark .expression-header p {
+  color: #9ca5b2;
+}
+
+.dark .expression-result-card,
+.dark .expression-group-card {
+
+  background: #11161e;
+
+  border-color: #2a3340;
+
+  color: #f1f4f8;
+}
+
+.dark .expression-result-card {
+  box-shadow: 5px 5px 0 #080b0f;
+}
+
+.dark .expression-box {
+  background: #0e1929;
+
+  border-color: #4e9aff;
+}
+
+.dark .f-label {
+  color: #cfd6df;
+}
+
+.dark .expression-value {
+  color: #4e9aff;
+}
+
+.dark .expression-note,
+.dark .expression-group-details span {
+  color: #9ca5b2;
+}
+
+.dark .expression-explanation {
+  background: #11161e;
+
+  border-color: #394351;
+}
+
+.dark .expression-explanation p,
+.dark .special-expression {
+  color: #9ca5b2;
+}

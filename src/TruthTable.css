@@ -1,0 +1,197 @@
+.truth-page {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.truth-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.back-button,
+.secondary-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 2px solid #ddd;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.back-button:hover,
+.secondary-button:hover {
+  border-color: #2374e1;
+  color: #2374e1;
+}
+
+.step-label {
+  color: #2374e1;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.truth-header h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 42px;
+}
+
+.truth-header p {
+  color: #73777c;
+}
+
+.truth-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.truth-info > div {
+  background: white;
+  border: 2px solid #deded8;
+  border-radius: 13px;
+  padding: 15px 20px;
+}
+
+.truth-info span {
+  display: block;
+  color: #8a8f96;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.truth-info strong {
+  font-size: 18px;
+}
+
+.truth-card {
+  background: white;
+  border: 2px solid #deded8;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 5px 5px 0 #e5e5df;
+}
+
+.truth-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.truth-card th {
+  font-family: "Patrick Hand", cursive;
+  font-size: 24px;
+  padding: 12px;
+  border-bottom: 2px dashed #cfcfc8;
+}
+
+.truth-card td {
+  text-align: center;
+  padding: 11px;
+  border-bottom: 1px solid #eeeeea;
+  font-weight: 600;
+}
+
+.truth-card tr:last-child td {
+  border-bottom: none;
+}
+
+.output-heading {
+  color: #2374e1;
+}
+
+.truth-card select {
+  width: 75px;
+  padding: 8px;
+  border: 2px solid #d8dce2;
+  border-radius: 8px;
+  background: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.truth-card select:focus {
+  outline: none;
+  border-color: #2374e1;
+}
+
+.truth-card select.filled {
+  border-color: #2374e1;
+  color: #2374e1;
+}
+
+.truth-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.generate-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  background: #2374e1;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.generate-button:hover {
+  transform: translateY(-2px);
+}
+
+.generate-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* DARK MODE */
+
+.dark .back-button,
+.dark .secondary-button,
+.dark .truth-info > div,
+.dark .truth-card {
+  background: #11161e;
+  border-color: #2a3340;
+  color: #f1f4f8;
+}
+
+.dark .truth-header p,
+.dark .truth-info span {
+  color: #9ca5b2;
+}
+
+.dark .truth-card {
+  box-shadow: 5px 5px 0 #080b0f;
+}
+
+.dark .truth-card td {
+  border-color: #252c35;
+}
+
+.dark .truth-card th {
+  border-color: #303743;
+}
+
+.dark .truth-card select {
+  background: #171d26;
+  color: #f1f4f8;
+  border-color: #353e4b;
+}

@@ -1,0 +1,239 @@
+.verilog-page {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.verilog-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.verilog-header h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 6px 0 10px;
+}
+
+.verilog-header p {
+  color: #73777c;
+  margin: 0;
+
+  line-height: 1.5;
+}
+.verilog-header > div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* SOURCE EXPRESSION */
+
+.verilog-expression-card {
+  max-width: 760px;
+  margin: 0 auto 20px;
+
+  background: white;
+
+  border: 2px solid #deded8;
+  border-radius: 14px;
+
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.verilog-expression-card span {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+
+  color: #8a8f96;
+}
+
+.verilog-expression-card strong {
+  font-family: "Patrick Hand", cursive;
+  font-size: 27px;
+
+  color: #2374e1;
+}
+
+
+/* CODE CARD */
+
+.verilog-code-card {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  background: #0e131a;
+
+  border: 2px solid #26303d;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 5px 5px 0 #dfe3e8;
+}
+
+.code-toolbar {
+  padding: 13px 18px;
+
+  background: #151b24;
+
+  border-bottom: 1px solid #2b3542;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: #9da7b4;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 12px;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  border: 1px solid #3b4655;
+
+  background: #171e27;
+
+  color: #dce4ed;
+
+  border-radius: 7px;
+
+  padding: 7px 10px;
+
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  border-color: #4e9aff;
+  color: #4e9aff;
+}
+
+.verilog-code-card pre {
+  margin: 0;
+
+  padding: 28px 32px;
+
+  overflow-x: auto;
+
+  background: #0e131a;
+
+  text-align: left;
+
+  white-space: pre;
+
+  min-height: 280px;
+}
+
+.verilog-code-card pre code {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent !important;
+
+  color: #e6edf3 !important;
+
+  border: none;
+
+  border-radius: 0;
+
+  font-family:
+    "SFMono-Regular",
+    "Cascadia Code",
+    Consolas,
+    monospace;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1.8;
+
+  letter-spacing: 0;
+
+  text-align: left;
+
+  white-space: pre;
+}
+
+
+/* EXPLANATION */
+
+.verilog-explanation {
+  max-width: 760px;
+
+  margin: 20px auto;
+
+  padding: 18px;
+
+  border: 2px dashed #c9ced5;
+
+  border-radius: 13px;
+}
+
+.verilog-explanation h3 {
+  font-family: "Patrick Hand", cursive;
+
+  font-size: 22px;
+
+  margin-bottom: 5px;
+}
+
+.verilog-explanation p {
+  font-size: 13px;
+
+  color: #73777c;
+}
+
+.verilog-explanation code {
+  color: #2374e1;
+
+  font-weight: 800;
+}
+
+
+/* DARK MODE */
+
+.dark .verilog-header p {
+  color: #9ca5b2;
+}
+
+.dark .verilog-expression-card {
+  background: #11161e;
+
+  border-color: #2a3340;
+
+  color: #f1f4f8;
+}
+
+.dark .verilog-code-card {
+  box-shadow: 5px 5px 0 #080b0f;
+}
+
+.dark .verilog-explanation {
+  border-color: #394351;
+}
+
+.dark .verilog-explanation p {
+  color: #9ca5b2;
+}
